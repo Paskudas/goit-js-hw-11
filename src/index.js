@@ -51,7 +51,6 @@ function onFormSubmit (evt){
         ,{width:'350px', borderRadius: '10px', position: 'center-center',clickToClose: true, useIcon: false,}
         );
     }
-
 };
 
 // ФУНКЦІЯ - отримання зображень з https://pixabay.com
