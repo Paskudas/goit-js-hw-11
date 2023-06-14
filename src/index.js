@@ -8,7 +8,7 @@ import axios from 'axios';
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
-const MY_API_KEY = '33995663-3283b38da6c47940fd5e67885'; // мій персональний ключ з pixabay
+const MY_API_KEY = '37279365-a2a50775926a5617d77bf7a50'; // мій персональний ключ з pixabay
 const BASE_URL = 'https://pixabay.com/api/';
 let page = 1;
 let PHOTO_NAME ="";
