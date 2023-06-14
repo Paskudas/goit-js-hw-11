@@ -4,12 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Search images</title>
-    <link rel="stylesheet" href="styles.css" />
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/notiflix"></script>
-    <script src="index.js" type="module"></script>
+    <link rel="stylesheet" href="./sass/index.scss" />
+    <script type="module" src="./index.js"></script>
   </head>
-  <body>
+  <body>    
     <form class="search-form" id="search-form">
       <input
         type="text"
@@ -17,17 +15,17 @@
         autocomplete="off"
         placeholder="Search images..."
       />
-      <button class="button-link button" type="submit">Search</button>
+      <button class="button-link button" type="click">Search</button>
     </form>
     <div class="container">
       <div class="imgBox">
         <div class="gallery">
-          <!-- Картки зображень -->
+          <!-- Картки зображень -->    
         </div>
       </div>
       <div class="box-load-more">
-        <button type="button" class="load-more button">Load more</button>
+      <button type="button" class="load-more button">Load more</button>
       </div>
-    </div>
+   </div>
   </body>
-</html>
+</html> 
