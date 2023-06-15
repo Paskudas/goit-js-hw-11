@@ -1,50 +1,65 @@
-.container {
-    max-width: 1490px;
-    min-width: 390px;
-    margin: 0 auto;
-  }
-  
-  .search-form {
-    width: 100%;
-    min-width: 390px;
-    margin: 0 auto;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    display: flex;
-    justify-content: center;
-    background: linear-gradient(62.93deg, #66659e 19.68%, #9a8290 89.55%);
-  }
-  
-  .button {
-    margin-left: 20px;
-    height: auto;
-    width: auto;
-    text-align: justify;
-    background: linear-gradient(
-      30deg,
-      rgb(32, 252, 252),
-      rgb(101, 101, 255),
-      rgb(254, 183, 196),
-      rgb(224, 17, 224)
-    );
-    color: #ffffff;
-    border: none;
-    padding: 12px 24px;
-    font-size: 16px;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border-radius: 8px;
-    box-shadow: 2px 4px 6px #25d0e3;
-    transition: all 0.5s ease;
-  }
-  
-  .button:hover {
-    background: linear-gradient(
-      30deg,
-      rgb(224, 17, 224),
-      pink,
-      rgb(60, 60, 255),
-      rgb(32, 252, 252)
-    );
-    box-shadow: 2px 4px 6px #a8097e;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+}
+
+h1 {
+  margin: 0;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.search-form {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 1rem;
+}
+
+.photo-card {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  text-align: center;
+}
+
+.photo-card img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.info-item {
+  margin: 0;
+  font-size: 0.9rem;
+}
