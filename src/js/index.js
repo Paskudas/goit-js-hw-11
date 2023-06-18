@@ -18,6 +18,8 @@ const lightbox = new SimpleLightbox('.photo-card a');
 form.addEventListener('submit', handleFormSubmit);
 loadMoreBtn.addEventListener('click', loadMoreImages);
 
+hideLoadMoreButton();
+
 async function handleFormSubmit(event) {
   event.preventDefault();
   gallery.innerHTML = '';
@@ -34,6 +36,7 @@ async function fetchImages(searchQuery) {
     const totalHits = response.data.totalHits;
     if (images.length === 0) {
       Notiflix.Notify.info('Sorry, there are no images matching your search query. Please try again.');
+      hideLoadMoreButton();
     } else {
       gallery.insertAdjacentHTML('beforeend', createGalleryMarkup(images));
       lightbox.refresh();
@@ -41,10 +44,10 @@ async function fetchImages(searchQuery) {
         Notiflix.Notify.success(`Hooray! We found ${totalHits} images.`);
       }
       if (totalHits - page * 40 <= 0) {
-        loadMoreBtn.classList.add('hidden');
+        hideLoadMoreButton();
         Notiflix.Notify.info('We\'re sorry, but you\'ve reached the end of search results.');
       } else {
-        loadMoreBtn.classList.remove('hidden');
+        showLoadMoreButton();
       }
       page += 1;
     }
@@ -81,4 +84,12 @@ async function loadMoreImages() {
     top: cardHeight * 2,
     behavior: 'smooth',
   });
+}
+
+function hideLoadMoreButton() {
+  loadMoreBtn.style.display = 'none';
+}
+
+function showLoadMoreButton() {
+  loadMoreBtn.style.display = 'block';
 }
